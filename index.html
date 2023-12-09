@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Albertng.dev Admin Dashboard</title>
+    <title>Admin Dashboard</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,9 +11,10 @@
 </head>
 <body>
     <div class="sidebar">
-        <img class="sidebar-handler" src="./img/minimize.svg" alt="" height="25px" width="auto">
+        <img class="sidebar-handler-retract" id="sidebar-handler-retract" src="./img/minimize.svg" alt="" height="25px" width="auto">
+        <img class="sidebar-handler-expand" id="sidebar-handler-expand" src="./img/minimize-flipped.svg" alt="" height="25px" width="auto">
         <div class="title">
-            <div>
+            <div id="title-div">
                 <img src="./img/rocket.svg" alt="A logo representing a rocketship" height="50px" width="auto">
                 <h1>Dashboard</h2>
             </div>
@@ -59,7 +60,8 @@
             </div>
         </div>
     </div>
-    <div class="header"></div>
-    <div class="main-content"></div>
+    <div class="header" id="header"></div>
+    <div class="main-content" id="main-content"></div>
 </body>
+<script src="./js/javascript.js" defer></script>
 </html>
