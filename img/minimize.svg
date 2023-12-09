@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 24 24"
+   version="1.1"
+   id="svg2"
+   sodipodi:docname="minimize.svg"
+   inkscape:version="1.3.1 (91b66b0, 2023-11-16)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="namedview2"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="49"
+     inkscape:cx="12"
+     inkscape:cy="12.010204"
+     inkscape:window-width="1504"
+     inkscape:window-height="1289"
+     inkscape:window-x="26"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <title
+     id="title1">86.Arrow Left</title>
+  <g
+     id="_86.Arrow_Left"
+     data-name="86.Arrow Left"
+     style="fill:#ffffff">
+    <path
+       d="M12,24A12,12,0,1,1,24,12,12.013,12.013,0,0,1,12,24ZM12,2A10,10,0,1,0,22,12,10.011,10.011,0,0,0,12,2Z"
+       id="path1"
+       style="fill:#ffffff" />
+    <polygon
+       points="10.293 14.707 5.586 10 10.293 5.293 11.707 6.707 8.414 10 11.707 13.293 10.293 14.707"
+       id="polygon1"
+       style="fill:#ffffff" />
+    <path
+       d="M16,18H14V13a1.882,1.882,0,0,0-2-2H7V9h5a3.888,3.888,0,0,1,4,4Z"
+       id="path2"
+       style="fill:#ffffff" />
+  </g>
+  <metadata
+     id="metadata2">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>86.Arrow Left</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

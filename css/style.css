@@ -1,32 +1,85 @@
 * {
-    outline: solid black 3px;
+    
 }
 
 html {
     height: 100%;
 }
 
+/* MAIN LAYOUT*/
+
 body {
     min-height: 99%;
     display: grid;
-    grid-template-columns: clamp(200px, 25%, 350px) 4fr;
+    grid-template-columns: 80px clamp(200px, 20%, 250px) 4fr;
     grid-template-rows: max(130px, 15%) 5fr;
 }
 
-.container {
-    
-}
+/*SIDEBAR*/
 
 .sidebar {
-    min-height: 100%;
     grid-row: 1 / 3;
+    grid-column: 1 / 3;
     background-color: rgb(116, 202, 176);
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
 }
 
+.sidebar > .title > div, 
+.sidebar > .option-list > div,
+.sidebar > .separated > div {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar > .title > div {
+    gap: 15px;
+}
+
+.sidebar > .option-list > div,
+.sidebar > .separated > div {
+    gap: 25px;
+    cursor: pointer;
+}
+
+.sidebar > .title > div > h1 {
+    color: white;
+    font-size: 30px;
+}
+
+.sidebar > .option-list > div > p,
+.sidebar > .separated > div > p {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.separated {
+    margin-top: auto;
+}
+
+.title {
+margin-bottom: 2.5vh;
+}
+
+.sidebar-handler {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+
+
+
+
 .header {
-    
+    outline: solid 3px black;
 }
 
 .main-content {
-
+    outline: solid 3px black;
 }
