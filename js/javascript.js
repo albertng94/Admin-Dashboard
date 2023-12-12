@@ -1,9 +1,9 @@
 
 
-minimizeSidebar();
+resizeSidebar();
 
 
-function minimizeSidebar() {
+function resizeSidebar() {
     const sidebarHandlerRetract = document.getElementById("sidebar-handler-retract");
     const header = document.getElementById("header");
     const mainContent = document.getElementById("main-content");

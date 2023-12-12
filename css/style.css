@@ -4,6 +4,7 @@
 
 html {
     height: 100%;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* MAIN LAYOUT*/
@@ -123,15 +124,183 @@ body {
     opacity: 1;
 }
 
+
 /*HEADER*/
+
 .header {
-    outline: solid 3px black;
     position: relative;
     z-index: 3;
+    display: grid;
+    grid-template-rows: 1.5fr 3fr;
+    padding-left: 50px;
+    padding-right: 50px;
+    min-width: fit-content;
+    background-color: white;
 }
+
+/*Upper-header*/
+
+.upper-header {
+    grid-row: 1;   
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    align-content: center;
+}
+
+.search-bar {
+    grid-column: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+#search {
+    all: unset;
+    background-color: rgb(198, 237, 222);
+    height: 30px;
+    width: clamp(150px, 35vw, 800px);
+    border-radius: 20px 20px;
+}
+
+.search-bar > img {
+    height: 25px;
+    width: auto;
+}
+
+.toggle-mode-div {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.github {
+    grid-column: 3;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 5px;
+}
+
+.github > p {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+/*Toggle*/
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 44px;
+    height: 24px;
+    border-radius: 12px;
+    border: 2px solid black;
+    background: #eee;
+    transition: all 0.4s;
+    position: relative;
+  }
+
+  /*
+     style the ::before content to look like
+     the inner toggle switch - the bit that moves
+  */
+
+  input[type="checkbox"]::before {
+    width: 16px;
+    height: 16px;
+    border-radius: 9px;
+    background-color: black;
+    content: '';
+    position: absolute;
+    top: 2.5px;
+    left: 10%;
+    transition: all 0.4s;
+  }
+
+  /*
+     change the outer background color and move the inner toggle switch
+     when the checkbox is checked; use transitions for smooth animation
+  */
+
+  input[type="checkbox"]:checked {
+    transition: all 0.4s;
+  }
+
+  input[type="checkbox"]:checked::before {
+    left: 50%;
+    transition: all 0.4s;
+  }
+
+
+/*Lower-header*/
+
+.lower-header {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-content: center;
+}
+
+.TOP {
+    max-height: fit-content;
+    grid-column: 1 / 2;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 50px;
+}
+
+.TOP > img {
+
+}
+
+.TOP > div {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.TOP > div > h4{
+    margin-top: 0;
+    margin-bottom: -5px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.TOP > div > h3 {
+    font-size: 25px;
+    margin: 0;
+
+}
+
+.buttons {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+
+.buttons > button {
+    width: clamp(80px, 20%, 150px);
+    height: 35px;
+    border: none;
+    border-radius: 25px 25px;
+    background-color: rgb(116, 202, 176);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/*MAIN-CONTENT*/
 
 .main-content {
     outline: solid 3px black;
     position: relative;
     z-index: 3;
 }
+
+
+
