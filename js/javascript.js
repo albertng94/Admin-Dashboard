@@ -24,3 +24,9 @@ function resizeSidebar() {
         sidebarHandlerExpand.classList.remove("expandHandler");
     });
 }
+
+// add shadows to header and main-content sections
+// make the font-sizes responsive
+// increase size for TOP div
+// tweak toggle and add light-dark mode functionality
+// finish interactive elements tweaking

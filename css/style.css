@@ -13,7 +13,7 @@ body {
     min-height: 99%;
     display: grid;
     grid-template-columns: 80px clamp(200px, 20%, 250px) 4fr;
-    grid-template-rows: max(130px, 15%) 5fr;
+    grid-template-rows: 200px 5fr;
 }
 
 /*SIDEBAR*/
@@ -157,7 +157,7 @@ body {
 
 #search {
     all: unset;
-    background-color: rgb(198, 237, 222);
+    background-color: rgb(213, 234, 226);
     height: 30px;
     width: clamp(150px, 35vw, 800px);
     border-radius: 20px 20px;
@@ -292,15 +292,182 @@ input[type="checkbox"] {
     color: white;
     font-size: 14px;
     font-weight: 600;
+    cursor: pointer;
+}
+
+.buttons > button:hover {
+    background-color: rgb(81, 142, 123);
 }
 
 /*MAIN-CONTENT*/
 
+/*Projects Div*/
 .main-content {
-    outline: solid 3px black;
-    position: relative;
     z-index: 3;
+    background-color: rgb(213, 234, 226);
+    display: grid;
+    grid-template-columns: 0.7fr 0.3fr;
+    padding: 20px;
+    gap: 25px;
+    overflow: scroll;
 }
 
+.projects-external-div {
+    max-height: 80vh;
+    grid-column: 1;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+}
 
+.projects-external-div > h4 {
+    grid-row: 1;
+    align-self: end;
+    font-size: 20px;
+}
 
+.projects-internal-div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 25px;
+
+}
+
+.project {
+    max-height: 450px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    display: grid;
+    grid-template-rows: 25px 250px 1fr 25px;
+    gap: 15px;
+}
+
+.project > h4 {
+    display: contents;
+}
+
+.project > a > img,
+.project > img {
+    height: 250px;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.project > p {
+    display: contents;
+    font-size: 14px;
+    color: rgb(93, 92, 92);
+}
+
+.project > div {
+    grid-row: 4;
+    display: flex;
+    justify-content: end;
+    gap: 8px;
+}
+
+.project > div > img {
+    cursor: pointer;
+}
+
+/*Side Dive*/
+.main-side-div {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 50px;
+}
+
+.anouncements,
+.trending {
+    display: grid;
+    justify-items: stretch;
+    grid-template-rows: 50px 1fr;
+    max-width: 400px;
+    height: fit-content;
+}
+
+.anouncements > h4,
+.trending > h4 {
+    align-self: end;
+    font-size: 20px;
+}
+
+.anouncements > div {
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px 20px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.anounced {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    border-bottom: 2px rgb(194, 191, 191) solid;
+}
+
+.anounced:nth-child(3) {
+    border-bottom: none;
+}
+
+.anounced > h5 {
+    margin: 0;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.anounced > p {
+    margin: 0;
+    padding: 0 10px;
+    font-size: 13px;
+    color: rgb(93, 92, 92);
+}
+
+.trending > div {
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.trendy {
+    display: flex;
+    gap: 20px;
+    align-self: start;
+    align-items: center;
+
+}
+
+.trendy > img {
+    height: 50px;
+    width: auto;
+    border-radius: 100%;
+}
+
+.trendy > div > p {
+    margin: 0;
+    font-size: 12px;
+    color: rgb(93, 92, 92);
+}
+
+.trendy > div > .user {
+    color: rgb(33, 32, 32);
+    cursor: pointer;
+}
+
+/*MAIN-CONTENT INTERACTION*/
+
+.anounced > h5:hover {
+    color: rgb(47, 47, 245);
+}
+
+.trendy > div > .user:hover {
+    color: rgb(47, 47, 245);
+}
+
+.project > div > img:hover,
+.project > div > a:hover {
+    
+}
