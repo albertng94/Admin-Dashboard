@@ -38,5 +38,5 @@
      stroke-linejoin="round"
      stroke-width="32"
      id="path1"
-     style="stroke:#74cab0;stroke-opacity:1" />
+     style="stroke:#74cab0;stroke-opacity:1;fill:#74cab0;fill-opacity:1" />
 </svg>
