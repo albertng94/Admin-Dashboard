@@ -1,10 +1,33 @@
-* {
-    
+:root {
+    --sidebar-color: rgb(116, 202, 176);
+    --button-hover-color: rgb(81, 142, 123);
+    --option-border-hover-color: solid 4px rgb(47, 81, 70);
+    --header-color: white;
+    --main-section-color: rgb(213, 234, 226);
+    --main-section-title-color: black;
+    --main-section-text-color: rgb(93, 92, 92);
+    --trendy-user-color: rgb(33, 32, 32);
+    --anounced-separators-color: solid 2px rgb(194, 191, 191);
+    --main-section-links-hover-color: rgb(47, 47, 245);
+}
+
+.dark {
+    --sidebar-color: rgb(203, 149, 49);
+    --button-hover-color: rgb(143, 105, 33);
+    --option-border-hover-color: solid 4px rgb(102, 75, 24);
+    --header-color: rgb(44, 43, 43);
+    --main-section-color: black;
+    --main-section-title-color: white;
+    --main-section-text-color: rgb(194, 191, 191);
+    --trendy-user-color: white;
+    --anounced-separators-color: solid 2px rgb(116, 114, 114);
+    --main-section-links-hover-color: rgb(10, 182, 182);
 }
 
 html {
     height: 100%;
     font-family: 'Poppins', sans-serif;
+    color: var(--main-section-title-color);
 }
 
 /* MAIN LAYOUT*/
@@ -21,7 +44,7 @@ body {
 .sidebar {
     grid-row: 1 / 3;
     grid-column: 1 / 3;
-    background-color: rgb(116, 202, 176);
+    background-color: var(--sidebar-color);
     display: flex;
     flex-direction: column;
     position: relative;
@@ -47,13 +70,13 @@ body {
 }
 
 .sidebar > .title > div > h1 {
-    color: white;
+    color: var(--header-color);
     font-size: 30px;
 }
 
 .sidebar > .option-list > div > p,
 .sidebar > .separated > div > p {
-    color: white;
+    color: var(--header-color);
     font-size: 20px;
     font-weight: 500;
 }
@@ -89,8 +112,8 @@ body {
 .sidebar > .separated > div:focus,
 .sidebar > .option-list > div:hover,
 .sidebar > .separated > div:hover {
-    background-color: rgb(81, 142, 123);
-    border-left: solid 4px rgb(47, 81, 70);
+    background-color: var(--button-hover-color);
+    border-left: var(--option-border-hover-color);
 }
 
 .sidebar-handler-retract:hover {
@@ -135,7 +158,7 @@ body {
     padding-left: 50px;
     padding-right: 50px;
     min-width: fit-content;
-    background-color: white;
+    background-color: var(--header-color);
 }
 
 /*Upper-header*/
@@ -157,7 +180,7 @@ body {
 
 #search {
     all: unset;
-    background-color: rgb(213, 234, 226);
+    background-color: var(--main-section-color);
     height: 30px;
     width: clamp(150px, 30vw, 800px);
     border-radius: 20px 20px;
@@ -184,11 +207,16 @@ body {
     cursor: pointer;
 }
 
-.github > p {
+.github > a {
+    all: unset;
+}
+
+.github > a > p {
     font-size: 20px;
     font-style: italic;
     font-weight: 600;
     cursor: pointer;
+    color: var(--main-section-title-color);
 }
 
 /*Toggle*/
@@ -200,7 +228,7 @@ input[type="checkbox"] {
     height: 24px;
     border-radius: 12px;
     border: 2px solid black;
-    background: rgb(116, 202, 176);
+    background: var(--sidebar-color);
     transition: all 0.4s;
     position: relative;
     cursor: pointer;
@@ -215,7 +243,7 @@ input[type="checkbox"] {
     width: 16px;
     height: 16px;
     border-radius: 9px;
-    background-color: white;
+    background-color: var(--header-color);
     content: '';
     position: absolute;
     top: 2.5px;
@@ -247,6 +275,10 @@ input[type="checkbox"] {
     align-content: center;
 }
 
+.lower-header > a {
+    all: unset;
+}
+
 .TOP {
     max-height: fit-content;
     grid-column: 1 / 2;
@@ -267,17 +299,18 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
-.TOP > div > h4{
+.TOP > div > h4 {
     margin-top: 0;
     margin-bottom: -5px;
     font-size: 14px;
     font-weight: 400;
+    color: var(--main-section-title-color);
 }
 
 .TOP > div > h3 {
     font-size: 25px;
     margin: 0;
-
+    color: var(--main-section-title-color);
 }
 
 .buttons {
@@ -292,8 +325,8 @@ input[type="checkbox"] {
     height: 35px;
     border: none;
     border-radius: 25px 25px;
-    background-color: rgb(116, 202, 176);
-    color: white;
+    background-color: var(--sidebar-color);
+    color: var(--header-color);
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
@@ -302,7 +335,7 @@ input[type="checkbox"] {
 /*Header Interaction*/
 
 .buttons > button:hover {
-    background-color: rgb(81, 142, 123);
+    background-color: var(--button-hover-color);
 }
 
 
@@ -312,7 +345,7 @@ input[type="checkbox"] {
 /*Projects Div*/
 .main-content {
     z-index: 3;
-    background-color: rgb(213, 234, 226);
+    background-color: var(--main-section-color);
     display: grid;
     grid-template-columns: 0.7fr 0.3fr;
     padding: 20px;
@@ -331,6 +364,7 @@ input[type="checkbox"] {
     grid-row: 1;
     align-self: end;
     font-size: 20px;
+    color: var(--main-section-title-color);
 }
 
 .projects-internal-div {
@@ -342,7 +376,7 @@ input[type="checkbox"] {
 
 .project {
     max-height: 450px;
-    background-color: white;
+    background-color: var(--header-color);
     border-radius: 15px;
     padding: 15px;
     display: grid;
@@ -352,6 +386,7 @@ input[type="checkbox"] {
 
 .project > h4 {
     display: contents;
+    color: var(--main-section-title-color);
 }
 
 .project > a > img,
@@ -365,7 +400,7 @@ input[type="checkbox"] {
 .project > p {
     display: contents;
     font-size: 14px;
-    color: rgb(93, 92, 92);
+    color: var(--main-section-text-color);
 }
 
 .project > div {
@@ -403,10 +438,11 @@ input[type="checkbox"] {
 .trending > h4 {
     align-self: end;
     font-size: 20px;
+    color: var(--main-section-title-color);
 }
 
 .anouncements > div {
-    background-color: white;
+    background-color: var(--header-color);
     border-radius: 15px;
     padding: 15px 20px;
     display: grid;
@@ -416,7 +452,7 @@ input[type="checkbox"] {
 .anounced {
     margin-bottom: 15px;
     margin-top: 15px;
-    border-bottom: 2px rgb(194, 191, 191) solid;
+    border-bottom: var(--anounced-separators-color);
 }
 
 .anounced:nth-child(3) {
@@ -427,17 +463,18 @@ input[type="checkbox"] {
     margin: 0;
     padding: 0 10px;
     cursor: pointer;
+    color: var(--main-section-title-color);
 }
 
 .anounced > p {
     margin: 0;
     padding: 0 10px;
     font-size: 13px;
-    color: rgb(93, 92, 92);
+    color: var(--main-section-text-color);
 }
 
 .trending > div {
-    background-color: white;
+    background-color: var(--header-color);
     border-radius: 15px;
     padding: 15px 20px;
     display: flex;
@@ -463,31 +500,31 @@ input[type="checkbox"] {
 .trendy > div > p {
     margin: 0;
     font-size: 12px;
-    color: rgb(93, 92, 92);
+    color: var(--main-section-text-color);
 }
 
 .trendy > div > .user {
-    color: rgb(33, 32, 32);
+    color: var(--trendy-user-color);
     cursor: pointer;
 }
 
 /*MAIN-CONTENT INTERACTION*/
 
 .anounced > h5:hover {
-    color: rgb(47, 47, 245);
+    color: var(--main-section-links-hover-color);
 }
 
 .trendy > div > .user:hover {
-    color: rgb(47, 47, 245);
+    color: var(--main-section-links-hover-color);
 }
 
 .trendy > img:hover {
-    border: 3px solid rgb(116, 202, 176);
+    border: 3px solid var(--sidebar-color);
 }
 
 .project > a > img:hover,
 .project > img:hover {
-    outline: 3px solid rgb(116, 202, 176);
+    outline: 3px solid var(--sidebar-color);
 }
 
 
