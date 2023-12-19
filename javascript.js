@@ -31,16 +31,16 @@ styleIcons();
 
 function styleIcons() {
     const projectIcons = document.getElementsByClassName("project-icon");
-    const eyeImg = "../img/eye-outline-black.svg";
-    const greenEyeImg = "../img/eye-outline-green.svg";
-    const whiteEyeImg = "../img/eye-outline-white.svg";
-    const githubImg = "../img/github.svg";
-    const greenGithubImg = "../img/github-green.svg";
-    const whiteGithubImg = "../img/github-white.svg";
-    const heartImg = "../img/heart-outline-black.svg";
-    const heartBorderGreenImg = "../img/heart-outline-green.svg";
-    const heartTotalGreenImg = "../img/heart-total-green.svg";
-    const heartBorderWhiteImg = "../img/heart-outline-white.svg";
+    const eyeImg = "./img/eye-outline-black.svg";
+    const greenEyeImg = "./img/eye-outline-green.svg";
+    const whiteEyeImg = "./img/eye-outline-white.svg";
+    const githubImg = "./img/github.svg";
+    const greenGithubImg = "./img/github-green.svg";
+    const whiteGithubImg = "./img/github-white.svg";
+    const heartImg = "./img/heart-outline-black.svg";
+    const heartBorderGreenImg = "./img/heart-outline-green.svg";
+    const heartTotalGreenImg = "./img/heart-total-green.svg";
+    const heartBorderWhiteImg = "./img/heart-outline-white.svg";
 
     for (const icon of projectIcons) {
 
@@ -96,7 +96,7 @@ function styleIcons() {
 }
 
 
-//APPLY DARK MODE
+//APPLY DARKMODE/LIGHTMODE
 
 let darkMode = localStorage.getItem("darkMode");
 const toggle = document.getElementById("toggle");
@@ -119,18 +119,16 @@ if (darkMode === "enabled") {
 }
 
 toggle.addEventListener("click", () => {
-    console.log(document.body.className);
     darkMode = localStorage.getItem("darkMode");
     if (darkMode !== "enabled") {
         enableDarkMode();
     } else {
         disableDarkMode();
     }
-    console.log(document.body.className + "after");
 });
 
 
-//CHANGE IMAGES ON DARKMODE
+//CHANGE IMAGES ON DARKMODE/LIGHTMODE
 
 toggle.addEventListener("click", () => {
     if (document.body.className.includes("dark")) {
@@ -144,25 +142,25 @@ toggle.addEventListener("click", () => {
 function swapImgOnDarkMode() {
     const images = document.querySelectorAll("img");
 
-    const heartBorderWhiteImg = "../img/heart-outline-white.svg";
-    const whiteEyeImg = "../img/eye-outline-white.svg";
-    const whiteGithubImg = "../img/github-white.svg";
-    const rocket = "../img/rocket-black.svg";
-    const home = "../img/home-black.svg"; 
-    const profile = "../img/profile-black.svg"; 
-    const messages = "../img/messages-black.svg"; 
-    const history = "../img/history-black.svg"; 
-    const tasks = "../img/tasks-black.svg"; 
-    const communities = "../img/communities-black.svg"; 
-    const settings = "../img/settings-black.svg"; 
-    const support = "../img/support-black.svg"; 
-    const privacy = "../img/privacy-black.svg"; 
-    const loupe = "../img/loupe-grey.svg"; 
-    const sun = "../img/sun.svg"; 
-    const moon = "../img/moon-white.svg";
-    const githubBig = "../img/github-white.svg";
-    const handlerRetract = "../img/minimize-black.svg";
-    const handlerExpand = "../img/minimize-flipped-black.svg";    
+    const heartBorderWhiteImg = "./img/heart-outline-white.svg";
+    const whiteEyeImg = "./img/eye-outline-white.svg";
+    const whiteGithubImg = "./img/github-white.svg";
+    const rocket = "./img/rocket-black.svg";
+    const home = "./img/home-black.svg"; 
+    const profile = "./img/profile-black.svg"; 
+    const messages = "./img/messages-black.svg"; 
+    const history = "./img/history-black.svg"; 
+    const tasks = "./img/tasks-black.svg"; 
+    const communities = "./img/communities-black.svg"; 
+    const settings = "./img/settings-black.svg"; 
+    const support = "./img/support-black.svg"; 
+    const privacy = "./img/privacy-black.svg"; 
+    const loupe = "./img/loupe-grey.svg"; 
+    const sun = "./img/sun.svg"; 
+    const moon = "./img/moon-white.svg";
+    const githubBig = "./img/github-white.svg";
+    const handlerRetract = "./img/minimize-black.svg";
+    const handlerExpand = "./img/minimize-flipped-black.svg";    
     
     for (const image of images) {
         if (document.body.className.includes("dark")) {
@@ -213,25 +211,25 @@ function swapImgOnDarkMode() {
 function swapImgOnLightMode() {
     const images = document.querySelectorAll("img");
 
-    const heartBorderWhiteImg = "../img/heart-outline-black.svg";
-    const whiteEyeImg = "../img/eye-outline-black.svg";
-    const whiteGithubImg = "../img/github.svg";
-    const rocket = "../img/rocket.svg";
-    const home = "../img/home.svg"; 
-    const profile = "../img/profile.svg"; 
-    const messages = "../img/messages.svg"; 
-    const history = "../img/history.svg"; 
-    const tasks = "../img/tasks.svg"; 
+    const heartBorderWhiteImg = "./img/heart-outline-black.svg";
+    const whiteEyeImg = "./img/eye-outline-black.svg";
+    const whiteGithubImg = "./img/github.svg";
+    const rocket = "./img/rocket.svg";
+    const home = "./img/home.svg"; 
+    const profile = "./img/profile.svg"; 
+    const messages = "./img/messages.svg"; 
+    const history = "./img/history.svg"; 
+    const tasks = "./img/tasks.svg"; 
     const communities = "../img/communities.svg"; 
-    const settings = "../img/settings.svg"; 
-    const support = "../img/support.svg"; 
-    const privacy = "../img/privacy.svg"; 
-    const loupe = "../img/loupe.svg"; 
-    const sun = "../img/sun-yellow.svg"; 
-    const moon = "../img/moon.svg";
-    const githubBig = "../img/github.svg";
-    const handlerRetract = "../img/minimize.svg";
-    const handlerExpand = "../img/minimize-flipped.svg";    
+    const settings = "./img/settings.svg"; 
+    const support = "./img/support.svg"; 
+    const privacy = "./img/privacy.svg"; 
+    const loupe = "./img/loupe.svg"; 
+    const sun = "./img/sun-yellow.svg"; 
+    const moon = "./img/moon.svg";
+    const githubBig = "./img/github.svg";
+    const handlerRetract = "./img/minimize.svg";
+    const handlerExpand = "./img/minimize-flipped.svg";    
     
     for (const image of images) {
         if (!document.body.className.includes("dark")) {
@@ -286,4 +284,5 @@ function swapImgOnLightMode() {
 // add shadows to header and main-content sections
 // make the font-sizes responsive
 // increase size for TOP div
+// fix toggle inner button position when user is on dark mode and reloads the page.
 // use local storage to keep likes after reloding?
