@@ -220,7 +220,7 @@ function swapImgOnLightMode() {
     const messages = "./img/messages.svg"; 
     const history = "./img/history.svg"; 
     const tasks = "./img/tasks.svg"; 
-    const communities = "../img/communities.svg"; 
+    const communities = "./img/communities.svg"; 
     const settings = "./img/settings.svg"; 
     const support = "./img/support.svg"; 
     const privacy = "./img/privacy.svg"; 
